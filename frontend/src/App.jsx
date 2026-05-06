@@ -169,7 +169,7 @@ function App() {
                 className="option"
                 onClick={() => startQuiz(subject.value)}
               >
-                {subject}
+                {subject.label}
               </button>
             ))}
           </div>
