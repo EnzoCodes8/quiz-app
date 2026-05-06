@@ -55,8 +55,8 @@ def get_quiz(subject: str, session: Session = Depends(get_session)):
     return questions
 
 
-@app.post("/submit-score")
-def submit_score(
+@app.post("/save-score")
+def save_score(
     subject: str,
     score: int,
     total_questions: int,
