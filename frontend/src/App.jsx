@@ -176,7 +176,7 @@ function App() {
 
           <h1 className="finished-title">Quiz Finished!</h1>
 
-          <h2 className="score-title">
+          <h2 className="final-score">
             Score: {score} / {questions.length}
           </h2>
 
@@ -189,7 +189,7 @@ function App() {
 
           <h2 className="quiz-history-title">Quiz History</h2>
 
-          {history.map((item) => (
+          {history.slice(-4).reverse().map((item) => (
             <div key={item.id} className="history-item">
               <p>
                 {item.subject}: {item.score}/{item.total_questions}
