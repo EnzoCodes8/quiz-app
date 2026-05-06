@@ -48,6 +48,7 @@ function App() {
     );
 
     const data = await response.json();
+    alert(JSON.stringify(data).slice(0, 300));
 
     console.log("Fetched questions:", data);
 
