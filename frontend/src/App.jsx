@@ -36,6 +36,7 @@ function App() {
     );
 
     const data = await response.json();
+    alert(JSON.stringify(data).slice(0, 300));
 
     console.log("Fetched questions:", data);
 
@@ -61,6 +62,20 @@ function App() {
     if (selectedAnswer !== null) return;
 
     setSelectedAnswer(answerLetter);
+
+    if (selectedSubject && questions.length === 0) {
+      return (
+        <div className="app">
+          <div className="quiz-card">
+            <h1>No questions found for {selectedSubject}</h1>
+
+            <button className="next-button" onClick={restartQuiz}>
+              Back to Subjects
+            </button>
+          </div>
+        </div>
+      );
+    }
 
     const currentQuestion = questions[currentIndex];
 
