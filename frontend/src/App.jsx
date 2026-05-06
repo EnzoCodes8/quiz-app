@@ -176,7 +176,7 @@ function App() {
 
           <h1 className="finished-title">Quiz Finished!</h1>
 
-          <h2>
+          <h2 className="score-title">
             Score: {score} / {questions.length}
           </h2>
 
