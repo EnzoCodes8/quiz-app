@@ -107,7 +107,13 @@ body {
 
 .score {
   font-size: 24px;
+  color: #000000;
   font-weight: bold;
+}
+
+.quiz-history-title {
+  color: #000000;
+  font-size: 24px;
 }
 
 .history-item {

@@ -187,7 +187,7 @@ function App() {
             Back to Subjects
           </button>
 
-          <h2>Quiz History</h2>
+          <h2 className="quiz-history-title">Quiz History</h2>
 
           {history.map((item) => (
             <div key={item.id} className="history-item">
