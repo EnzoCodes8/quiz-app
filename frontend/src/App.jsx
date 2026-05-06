@@ -192,8 +192,7 @@ function App() {
           {history.map((item) => (
             <div key={item.id} className="history-item">
               <p>
-                {item.subject} :
-                {item.score}/{item.total_questions}
+                {item.subject}: {item.score}/{item.total_questions}
               </p>
             </div>
           ))}
