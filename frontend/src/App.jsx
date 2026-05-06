@@ -52,7 +52,7 @@ function App() {
     console.log("Fetched questions:", data);
 
     setQuestions(data);
-    setSelectedSubject(subject);
+    setSelectedSubject(subject.label);
     setCurrentIndex(0);
     setSelectedAnswer(null);
     setScore(0);
