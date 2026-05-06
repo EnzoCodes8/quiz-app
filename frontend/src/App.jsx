@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
     console.log("Selected subject:", subject);
 
     const response = await fetch(
-      `http://127.0.0.1:8000/quiz/${encodeURIComponent(subject)}`
+      `${API_URL}/quiz/${encodeURIComponent(subject)}`
     );
 
     const data = await response.json();
@@ -50,14 +51,10 @@ function App() {
 }
 
   async function loadHistory() {
-    const response = await fetch(
-      "http://127.0.0.1:8000/history"
-    );
-
-    const data = await response.json();
-
-    setHistory(data);
-  }
+  const response = await fetch(`${API_URL}/history`);
+  const data = await response.json();
+  setHistory(data);
+}
 
 
   function handleAnswerClick(answerLetter) {
@@ -84,7 +81,7 @@ function App() {
       setIsFinished(true);
 
       await fetch(
-        `http://127.0.0.1:8000/submit-score?subject=${selectedSubject}&score=${score}&total_questions=${questions.length}`,
+        `${API_URL}/save-score?subject=${encodeURIComponent(selectedSubject)}&score=${score}&total_questions=${questions.length}`,
         {
           method: "POST"
         }
@@ -191,6 +188,20 @@ function App() {
     );
   }
 
+
+  if (selectedSubject && questions.length === 0) {
+    return (
+      <div className="app">
+        <div className="quiz-card">
+         <h1>No questions found for {selectedSubject}</h1>
+
+          <button className="next-button" onClick={restartQuiz}>
+           Back to Subjects
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const currentQuestion = questions[currentIndex];
 

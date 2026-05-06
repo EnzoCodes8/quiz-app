@@ -16,7 +16,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
     "http://localhost:5173",
-    "quiz-dqcsqt9px-enzocodes8s-projects.vercel.app"
+    "https://quiz-jd30169l7-enzocodes8s-projects.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
