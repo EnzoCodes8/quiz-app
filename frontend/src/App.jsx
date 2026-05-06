@@ -20,10 +20,22 @@ function App() {
 
 
   const subjects = [
-    "Mathematics",
-    "General Engineering and Applied Sciences",
-    "Electronics",
-    "Electronics Systems and Technologies"
+    {
+      label: "Mathematics",
+      value: "Mathematics"
+    },
+    {
+      label: "General Engineering and Applied Sciences",
+      value: "GEAS"
+    },
+    {
+      label: "Electronics",
+      value: "Electronics"
+    },
+    {
+      label: "Electronics Systems and Technologies",
+      value: "EST"
+    }
   ];
 
 
@@ -36,7 +48,6 @@ function App() {
     );
 
     const data = await response.json();
-    alert(JSON.stringify(data).slice(0, 300));
 
     console.log("Fetched questions:", data);
 
@@ -154,9 +165,9 @@ function App() {
           <div className="options">
             {subjects.map((subject) => (
               <button
-                key={subject}
+                key={subject.value}
                 className="option"
-                onClick={() => startQuiz(subject)}
+                onClick={() => startQuiz(subject.value)}
               >
                 {subject}
               </button>
