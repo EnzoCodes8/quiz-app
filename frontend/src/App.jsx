@@ -160,7 +160,9 @@ function App() {
       <div className="app">
         <div className="quiz-card">
 
-          <h1 className="start-title">Select Subject</h1>
+          <h1 className="start-title">Welcome to the ECE Board Reviewer Platform</h1>
+
+          <h2 className="select-title">Select Subject</h2>
 
           <div className="options">
             {subjects.map((subject) => (
