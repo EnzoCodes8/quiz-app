@@ -36,3 +36,6 @@ Subjects Covered
 **Deployment**
 - Vercel (Frontend)
 - Render (Backend)
+
+
+Note: The questions in the Database are still not yet added, for testing purposes of the app itself, Mathematics already contained 133 Questions
