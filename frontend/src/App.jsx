@@ -182,7 +182,7 @@ function App() {
 
         <div className="quiz-card">
 
-          <h1 className="start-title">Welcome to the ECE Board Reviewer Platform</h1>
+          <h1 className="start-title">Welcome to the ECE Board<br />Reviewer Platform</h1>
 
           <h2 className="select-title">Select Subject</h2>
 
