@@ -77,6 +77,17 @@ function App() {
     if (selectedSubject && questions.length === 0) {
       return (
         <div className="app">
+
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="background-video"
+          >
+            <source src="/videos/background.mp4" type="video/mp4" />
+          </video>
+
           <div className="quiz-card">
             <h1>No questions found for {selectedSubject}</h1>
 
@@ -158,6 +169,17 @@ function App() {
   if (!selectedSubject) {
     return (
       <div className="app">
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="background-video"
+        >
+          <source src="/videos/background.mp4" type="video/mp4" />
+        </video>
+
         <div className="quiz-card">
 
           <h1 className="start-title">Welcome to the ECE Board Reviewer Platform</h1>
@@ -185,6 +207,17 @@ function App() {
   if (isFinished) {
     return (
       <div className="app">
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="background-video"
+        >
+          <source src="/videos/background.mp4" type="video/mp4" />
+        </video>
+
         <div className="quiz-card">
 
           <h1 className="finished-title">Quiz Finished!</h1>
@@ -219,6 +252,17 @@ function App() {
   if (selectedSubject && questions.length === 0) {
     return (
       <div className="app">
+        
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="background-video"
+        >
+          <source src="/videos/background.mp4" type="video/mp4" />
+        </video>
+        
         <div className="quiz-card">
          <h1>No questions found for {selectedSubject}</h1>
 
@@ -235,6 +279,16 @@ function App() {
 
   return (
     <div className="app">
+
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="background-video"
+      >
+        <source src="/videos/background.mp4" type="video/mp4" />
+      </video>
 
       <div className="quiz-card">
 
